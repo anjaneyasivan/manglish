@@ -1,1 +1,80 @@
-My Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manglish unicode to ASCII converter</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+    <meta property="og:title" content="Manglish ASCII to Unicode converter"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://manglish.github.io/"/>
+    <meta property="og:image" content="https://lh5.ggpht.com/pfnbDRR-LYe0cbCedlvf9X0_FuB0eJez6S7idj8dAzwz4r--_Z3Et0FtTbhEULELuQ=w300-rw"/>
+</head>
+<style>
+    @font-face {
+        font-family: 'fml-indulekhabold';
+        src: url('./fonts/fmlin0bps-webfont.woff2') format('woff2'),
+        url('./fonts/fmlin0bps-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    #text-result {
+        font-family: 'fml-indulekhabold';
+        font-size: 1.4em;
+    }
+
+    .logo {
+        font-weight: bold;
+        color: #555 !important;
+        font-size: 1.2em;
+    }
+
+    .main-nav {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .main-panel {
+        margin-top: 2em;
+    }
+</style>
+<body>
+<nav class="nav main-nav">
+    <div class="nav-left">
+        <a class="nav-item logo">
+            Manglish ASCII TO Unicode Converter
+        </a>
+    </div>
+
+
+    <!-- This "nav-menu" is hidden on mobile -->
+    <!-- Add the modifier "is-active" to display it on mobile -->
+    <div class="nav-right nav-menu">
+        <a class="nav-item" href="https://www.facebook.com/anjaneya.sivan" target="_blank">
+            With love @dinkan
+        </a>
+
+    </div>
+</nav>
+
+<div class="container">
+    <div class="columns main-panel">
+        <div class="column is-6 is-offset-3">
+            <div class="field">
+                <label class="label">Enter malayalam unicode text</label>
+                <p class="control">
+                    <textarea id="unicode-text" class="textarea" placeholder="Type or paste text"></textarea>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-6 is-offset-3">
+            <div id="text-result"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/dist/app.bundle.js"></script>
+</body>
+</html>
